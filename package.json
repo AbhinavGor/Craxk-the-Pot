@@ -1,0 +1,49 @@
+{
+  "name": "crack-the-pot",
+  "version": "1.0.0",
+  "description": "Website for online quiz organized by The Hindu Eduction Plus Club",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhinavGor/Craxk-the-Pot.git"
+  },
+  "author": "Abhinav Gorantla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AbhinavGor/Craxk-the-Pot/issues"
+  },
+  "homepage": "https://github.com/AbhinavGor/Craxk-the-Pot#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "express-session": "^1.15.6",
+    "express-validator": "^6.5.0",
+    "file-type": "^14.6.2",
+    "fs": "0.0.1-security",
+    "jade": "^1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.5",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.4.8",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sharp": "^0.25.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
