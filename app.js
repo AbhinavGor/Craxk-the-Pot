@@ -34,11 +34,7 @@ app.use( express.static( "public" ) );
 
 // Express body parser
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.json({limit: '2mb'}));
-app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-limit: '2mb',
-extended: true
-})); 
+app.use(bodyParser.urlencoded({extended: true})); 
 
 // Express session
 app.use(

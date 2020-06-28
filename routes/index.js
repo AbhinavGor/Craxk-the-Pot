@@ -8,12 +8,21 @@ router.get('/', forwardAuthenticated, (req, res)=>{
     res.render("landing");
 })
 
+
+router.get('/login', forwardAuthenticated, (req, res)=>{
+    res.render("login");
+})
+
+router.get('/signup', forwardAuthenticated, (req, res)=>{
+    res.render("signup");
+})
+
 router.get('/dashboard', ensureAuthenticated, (req, res)=>{
-    res.send('Dash', {user: req.user})
+    res.render("dashboard")
 })
 
 
 router.get('/rules', ensureAuthenticated, (req, res)=>{
-    res.send('Yu are reading rules now')
+    res.render("rules")
 })
 module.exports = router

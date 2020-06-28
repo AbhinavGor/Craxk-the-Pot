@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    
+    <a class="navbar-brand js-scroll-trigger" target='_blank' href="https://www.thepcvit.com">THEPC</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger p-3" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger p-3" href="/dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger p-3" href="/articles/list">View Drafts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger p-3" href="/users/logout">logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid ml-auto">
+  <h1 class='bg-light mt-4 dash p-3'>All Submissions</h1>
+  <% articles.forEach(function(article){ %>
+    <div class="card">
+        <div class="card-body">
+          <h4 class="card-title sub-head"><%=article.auth%></h4>
+          <p class="card-text wel-fol"><%= article.email %></p>
+          <div class="subs-buttons">
+            <form action='/articles/downloads/<%= article._id %>' method="POST">
+              <button class="btn btn-primary" type = 'submit'>Download Draft</button>
+            </form>&nbsp;&nbsp;
+            <form action='/articles/view/<%= article._id %>' method="POST">
+              <button class="btn btn-primary" type = 'submit'>View Speech</button>
+            </form>
+          </div>
+        </div>
+      </div>
+<% }) %>
+</div>
+
