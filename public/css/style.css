@@ -394,6 +394,44 @@ body {
   .desc-text{
     font-size: 0.98em;
   }
+
+  #login, #register, #success{
+    background-image: url(https://images.unsplash.com/photo-1484387436194-cf7cb70800ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=60);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 10em 2em;
+  }
+
+  #success{
+    padding: 10em 2em;
+    color: white;
+  }
+/* 
+  #success h1{
+    font-size: 4em;
+  } */
+
+  #login .row, #register .row, #success .row{
+    color: white;
+    width: 60%;
+    margin: auto;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 20px;
+    padding: 40px;
+  }
+
+.row input{
+  color: white !important;
+  background-color: inherit;
+}
+
+.row input:focus{
+  background-color: inherit;
+  border: none;
+}
   @keyframes slide {
     0% {
       opacity: 0;
@@ -467,6 +505,21 @@ body {
   }
   @media screen and (max-width: 480px) {
 
+    .card-body{
+      padding: 40px !important;
+      overflow-x: hidden !important;
+    }
+
+    #login .row, #register .row{
+      width: 100%;
+    }
+
+    #success .row{
+      width: fit-content;
+    }
+    #success h1{
+      font-size: 1.6em;
+    }
     .collapse{
       background-color: white;
     }

@@ -43,7 +43,7 @@ router.post('/signup', (req, res) => {
       User.findOne({ email: email }).then(user => {
         if (user) {
           errors.push({ msg: 'Email already exists' });
-          res.render('register', {
+          res.render('signup', {
             errors,
             name,
             email,
@@ -60,12 +60,11 @@ router.post('/signup', (req, res) => {
             member
           });
           newUser.save();
-          req.flash(
-            'success_msg',
-            'You are now registered and can log in'
-          );
-        //   res.redirect('/users/login');
-        res.send('You can now login.')
+          // req.flash(
+          //   'success_msg',
+          //   'You are now registered and can log in'
+          // );
+          res.render('register-success');
         }
       });
     }
