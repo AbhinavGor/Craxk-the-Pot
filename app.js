@@ -34,7 +34,7 @@ app.use( express.static( "public" ) );
 
 // Express body parser
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.urlencoded({extended: true})); 
+app.use(bodyParser.urlencoded({extended: true}));
 
 // Express session
 app.use(
@@ -68,6 +68,7 @@ app.use(function(req, res, next) {
 // Routes
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
+app.use('/quiz',require('./routes/quiz.js'));
 // app.use('/recover', require('./routes/reset.js'));
 
 const PORT = process.env.PORT || 3000;
