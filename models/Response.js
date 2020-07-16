@@ -3,11 +3,21 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require("bcryptjs");
 
 const ResponseSchema = new mongoose.Schema({
-  answers: [
+  round1: [
       {
           type: String,
       }
   ],
+  round2: [
+    {
+        type: String,
+    }
+],
+round3: [
+  {
+      type: String,
+  }
+],
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref:'User'

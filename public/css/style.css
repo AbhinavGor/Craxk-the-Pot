@@ -286,12 +286,27 @@ body {
     display: flex;
     color: black !important;
     flex-direction: column;
-    width: 80% !important;
+    width: 100% !important;
     margin: 40px 0;
     padding: 0;
   }
-  .question-card h2{
+  .round-error{
+    margin-top: 2em;
+  }
+  .question-card h2, .question-card h3{
     text-align: left;
+  }
+  .question-card textarea{
+    margin-top: 1em;
+    border: 1px solid black !important;
+    border-radius: 20px;
+    padding: 10px;
+    width:  calc(76vw - 20px);      
+    height: calc(30vh - 20px);
+    resize: none;
+  }
+  .question-card textarea:focus{
+    border: none !important;
   }
   .q-form{
     display: flex;
@@ -476,6 +491,20 @@ body {
   background-color: inherit;
   border: none;
 }
+.last-butt{
+  background-color: #087E8B;
+  color: white;
+  font-weight: bold;
+  padding: 20px 40px !important;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.last-butt:hover{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+}
   @keyframes slide {
     0% {
       opacity: 0;
@@ -548,6 +577,14 @@ body {
     }
   }
   @media screen and (max-width: 480px) {
+
+    .question-card{
+      width: fit-content !important;
+    }
+    .question-card textarea{
+      width:  calc(70vw - 20px);      
+    height: calc(40vh - 20px);
+    }
 
     .card-body{
       padding: 40px !important;

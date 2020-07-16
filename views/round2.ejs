@@ -1,0 +1,92 @@
+<%- include('./partials/auth-menu') %>
+<!-- <div class="col-md-8 justify-content-center">
+    <h2>&lt;3</h2>
+    <label><input name = 'aOne' type="radio" value = "kissing" /></label>
+</div> -->
+
+<% if(user.round1) {if(user.round2){ %>
+    <div class="container-fluid form-group round-error">
+        <div class="row mt-6">
+          <div class="col-md-6 m-auto">
+            <div>
+              <h1 class="mb-4 mt-10">
+                <i class="far fa-times-circle"></i> &nbsp;&nbsp;You have already attempted Round 2 and this isn't Coursera &#129299;.
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+<% }else{ %>
+<div id="dashboard" class="container-fluid ml-auto">
+    <h1 class='user mt-4'><i class='fas fa-user'></i> Welcome <strong><%= user.name %></strong></h1>
+    <h1 class='wel-fol mt-4'>Your registered email is <span class='emphasis'><%= user.email%></span>.</h1>
+    <h1 class="mt-4 dash">Round 2</h1>
+    <form class="col-sm-12 q-form" action="/quiz/round2" method="post">
+      <div class="card question-card">
+          <div class="question"><h2>1.) &nbsp;&nbsp;&#128073;&#128081;&#128115;</h2><h3>Hint : A sports personality</h3></div>
+          <div class="options">
+              <label for='kissing'> Your Answer: <input name='aOne', type='text'/></label>
+          </div>
+      </div>
+      <div class="card question-card">
+          <div class="question"><h2>2.) &nbsp;&nbsp;&#128000;&#127858;&#127857;&#127836;</h2><h3>Hint : An animated film</h3></div>
+          <div class="options">
+              <label for='kissing'> Your Answer: <input name='aTwo', type='text'/></label>
+          </div>
+      </div>
+      <div class="card question-card">
+          <div class="question"><h2>3.) &nbsp;&nbsp;&#129300;&#127869;&#127848;&#127843;&#127828;</h2><h3>Hint : A country</h3></div>
+          <div class="options">
+              <label for='kissing'> Your Answer: <input name='aThree', type='text'/></label>
+          </div>
+      </div>
+      <div class="card question-card">
+          <div class="question"><h2>4.) &nbsp;&nbsp;&#129492;&#127851;&#127981;</h2><h3>Hint : A children's novel</h3></div>
+          <div class="options">
+              <label for='kissing'> Your Answer: <input name='aFour', type='text'/></label>
+          </div>
+      </div>
+      <div class="card question-card">
+          <div class="question"><h2>5.) &nbsp;&nbsp;&#127744;&#127946;</h2><h3>Hint : A brand name</h3></div>
+          <div class="options">
+              <label for='kissing'> Your Answer: <input name='aFive', type='text'/></label>
+          </div>
+      </div>
+      <div class="card question-card">
+          <div class="question"><h2>6.) &nbsp;&nbsp;&#128115;&#128758;&#128005;</h2><h3>Hint : A novel</h3></div>
+          <div class="options">
+              <label for='kissing'> Your Answer: <input name='aSix', type='text'/></label>
+          </div>
+      </div>
+      <div class="card question-card">
+          <div class="question"><h2>7.) &nbsp;&nbsp;&#128058;&#128509;&#128176;</h2><h3>Hint : An english movie</h3></div>
+          <div class="options">
+              <label for='kissing'> Your Answer: <input name='aSeven', type='text'/></label>
+          </div>
+      </div>
+      <div>
+          <button type="submit" name="button">Submit</button>
+      </div>
+      </div>
+    </form>  
+    </div>
+<% }} if (!user.round1){%>
+<div class="container-fluid form-group round-error">
+  <div class="row mt-6">
+    <div class="col-md-6 m-auto">
+      <div>
+        <h1 class="mb-4 mt-10">
+          <i class="far fa-times-circle"></i> &nbsp;&nbsp;You have to attempt Round 1 before attempting Round 2 &#9996;.
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% } %>
+
+
+  
+  
+  
+  

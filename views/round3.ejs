@@ -1,0 +1,67 @@
+<%- include('./partials/auth-menu') %>
+<!-- <div class="col-md-8 justify-content-center">
+    <h2>&lt;3</h2>
+    <label><input name = 'aOne' type="radio" value = "kissing" /></label>
+</div> -->
+
+<% if(user.round2) {if(user.round3){%>
+    <div class="container-fluid form-group round-error">
+        <div class="row mt-6">
+          <div class="col-md-6 m-auto">
+            <div>
+              <h1 class="mb-4 mt-10">
+                <i class="far fa-times-circle"></i> &nbsp;&nbsp;You have already attempted Round 3 and this isn't Coursera &#129299;.
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+<% } else{ %>
+<div id="dashboard" class="container-fluid ml-auto">
+    <h1 class='user mt-4'><i class='fas fa-user'></i> Welcome <strong><%= user.name %></strong></h1>
+    <h1 class='wel-fol mt-4'>Your registered email is <span class='emphasis'><%= user.email%></span>.</h1>
+    <h1 class="mt-4 dash">Round 3</h1>
+    <form class="col-sm-12 q-form" action="/quiz/round3" method="post">
+      <div class="card question-card">
+          <div class="question"><h2>1.) &nbsp;&nbsp;Story 1</h2><h3>&#127776;&#128104;&#128748;&#127470;&#127475;&#129300;&#127482;&#127480;&#128115;&#128586;&#127941;&#127939;&#127939;&#127939;&#127939;&#128101;&#128101;&#128101;&#128101;&#128101;&#129331;&#129331;&#129331;&#129331;&#129331;&#128104;&#128557;&#128557;&#128557;&#128557;&#128104;&#128064;&#128103;&#128107;&#128214;&#127470;&#127475;&#127470;&#127475;&#127470;&#127475;&#127470;&#127475;&#128145;&#128103;&#128483;&#128104;&#128581;&#128104;&#128557;&#128747;&#127776;</h3></div>
+          <div class="options">
+              <label for='kissing'><textarea name='aOne', placeholder = 'Your Interpretation: ' type='text' rows = 4  ></textarea></label>
+          </div>
+      </div>
+      <div class="card question-card">
+          <div class="question"><h2>2.) &nbsp;&nbsp;Story 2</h2><h3>&#9757;&#127774;&#129299;&#128187;&#9200;&#128547;&#127829;&#127860;&#128064;&#128105; &#8205; &#127979;&#128515;&#129315;&#127749;&#127751;&#9729;&#128694;&#127969;</h3></div>
+          <div class="options">
+              <label for='kissing'><textarea name='aTwo', placeholder = 'Your Interpretation: ' type='text' rows = 4 ></textarea></label>
+          </div>
+      </div>
+      <div class="card question-card">
+          <div class="question"><h2>3.) &nbsp;&nbsp;Story 3</h2><h3>&#129490;&#128268;&#128161;&#10024;&#10024;&#128220;&#127776;&#127482;&#127480;&#128198;&#128118;&#128072;&#127878;&#128283;&#127912;&#128165;&#65039;&#128558;&#128558;&#128558;&#127993;&#10060;&#127748;</h3></div>
+          <div class="options">
+              <label for='kissing'><textarea name='aThree', placeholder = 'Your Interpretation: ' type='text' rows = 4 ></textarea></label>
+          </div>
+      </div>
+      <div>
+          <button type="submit" name="button" class='last-butt'>Submit</button>
+      </div>
+      </div>
+    </form>  
+    </div>
+<% }}else{ %>
+<div class="container-fluid form-group round-error">
+  <div class="row mt-6">
+    <div class="col-md-6 m-auto">
+      <div>
+        <h1 class="mb-4 mt-10">
+          <i class="far fa-times-circle"></i> &nbsp;&nbsp;You have to attempt Round 2 before attempting Round 3 &#9996;.
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
+
+
+  
+  
+  
+  
