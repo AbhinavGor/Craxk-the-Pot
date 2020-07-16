@@ -32,6 +32,15 @@ const UserSchema = new mongoose.Schema({
 
 resetPasswordExpires: {
     type: Date,
+},
+round1: {
+  type: Boolean,
+},
+round2:{
+  type: Boolean
+},
+round3:{
+  type: Boolean
 }
 });
 

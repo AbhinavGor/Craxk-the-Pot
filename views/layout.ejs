@@ -25,14 +25,14 @@
     $(window).on('scroll', function () {
         if ( $(window).scrollTop() > 200 ) {
             $('#mainNav').addClass('active');
-            $('.navbar-brand').addClass('activeText');
-            $('.navbar-toggler .fas').addClass('activeText');
-            $('.collapse li a').addClass('activeText');
+            $('#mainNav .navbar-brand').addClass('activeText');
+            $('#mainNav .navbar-toggler .fas').addClass('activeText');
+            $('#mainNav .collapse li a').addClass('activeText');
         } else {
             $('#mainNav').removeClass('active');
-            $('.navbar-brand').removeClass('activeText');
-            $('.navbar-toggler .fas').removeClass('activeText');
-            $('.collapse li a').removeClass('activeText');
+            $('#mainNav .navbar-brand').removeClass('activeText');
+            $('#mainNav .navbar-toggler .fas').removeClass('activeText');
+            $('#mainNav .collapse li a').removeClass('activeText');
         }
     });
 });

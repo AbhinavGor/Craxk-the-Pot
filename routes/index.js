@@ -18,11 +18,11 @@ router.get('/signup', forwardAuthenticated, (req, res)=>{
 })
 
 router.get('/dashboard', ensureAuthenticated, (req, res)=>{
-    res.render("dashboard")
+    res.render("dashboard", {user: req.user})
 })
 
 
 router.get('/rules', ensureAuthenticated, (req, res)=>{
-    res.render("rules")
+    res.render("rules", {user: req.user})
 })
 module.exports = router

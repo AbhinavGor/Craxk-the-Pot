@@ -1,37 +1,35 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const ejs = require("ejs");
-const mongoose = require("mongoose");
+const  express = require('express');
+const router = express.Router();
+const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
-const app = express();
+const Response = require('../models/Response');
+const { response } = require('express');
 
-app.set('view engine', 'ejs');
-
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-
-const answersSchema = {
-  a1: String,
-  a2: String,
-  a3: String
-};
-
-const Answer = new mongoose.model("answer",answersSchema);
-
-app.get("/quiz", function(req, res) {
+router.get("/quiz", ensureAuthenticated, function(req, res) {
   res.render("quiz-page");
 });
 
-app.post("/", function(req, res) {
+router.post("/", ensureAuthenticated, function(req, res) {
   const aOne = req.body.qone;
   const aTwo = req.body.qtwo;
   const aThree = req.body.qthree;
 
-  const answer = new Answer({
-    a1:aOne,
-    a2:aTwo,
-    a3:aThree
+  const response = new Response({
   });
+  response.answers.push(aOne, aTwo, aThree);
   answer.save();
 });
+
+router.get('/round1', ensureAuthenticated, (req, res) => {
+  res.render('round1', {user: req.user});
+})
+
+router.post('/round1', ensureAuthenticated, (req, res) => {
+  const {aOne, aTwo, aThree} = req.body;
+
+  const response = new Response({});
+  response.answers.push(aOne, aTwo, aThree);
+  response.save();
+  res.send(response);
+})
+module.exports = router

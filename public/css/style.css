@@ -17,6 +17,9 @@ body {
     font-weight: 400;
     margin-bottom: 30px;
   }  
+  #authNav{
+    color: blue !important;
+  }
   .jumbotron {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1582746019667-1cea6a77fc93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=60");
     color: #fff;
@@ -214,6 +217,11 @@ body {
   .active{
     background-color: white !important;
   }
+  .activeNav{
+    background-color: black;
+    color: black;
+    
+  }
   .activeText{
     color: black !important;
   }
@@ -266,11 +274,47 @@ body {
   bottom: 0 !important;
   width: 100%;
   }
+  #dashboard{
+    margin: 2em 40em;
+  }
   .dash{
     color: #087E8B;
     font-weight: bolder;
     font-size: 2.8em;
   }
+  .question-card{
+    display: flex;
+    color: black !important;
+    flex-direction: column;
+    width: 80% !important;
+    margin: 40px 0;
+    padding: 0;
+  }
+  .question-card h2{
+    text-align: left;
+  }
+  .q-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .options{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .options label{
+    text-align: left;
+    padding: 10px 20px;
+    /* background-color: lavender; */
+    border-radius: 20px;
+  }
+
+  .options label:hover{
+
+  }
+
   .user{
     color: #2c2c2c;
     font-size: 3.4em;

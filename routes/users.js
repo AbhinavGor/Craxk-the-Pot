@@ -40,6 +40,9 @@ router.post('/signup', (req, res) => {
     }else{
         member = false;
     }
+    const round1 = false;
+    const round3 = false;
+    const round2 = false;
       User.findOne({ email: email }).then(user => {
         if (user) {
           errors.push({ msg: 'Email already exists' });
@@ -57,7 +60,10 @@ router.post('/signup', (req, res) => {
             email,
             password,
             submitted,
-            member
+            member, 
+            round1,
+            round2,
+            round3
           });
           newUser.save();
           // req.flash(

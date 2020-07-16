@@ -1,0 +1,78 @@
+<%- include('./partials/auth-menu') %>
+<!-- <div class="col-md-8 justify-content-center">
+    <h2>&lt;3</h2>
+    <label><input name = 'aOne' type="radio" value = "kissing" /></label>
+</div> -->
+
+  <div id="dashboard" class="container-fluid ml-auto">
+  <h1 class='user mt-4'><i class='fas fa-user'></i> Welcome <strong><%= user.name %></strong></h1>
+  <h1 class='wel-fol mt-4'>Your registered email is <span class='emphasis'><%= user.email%></span>.</h1>
+  <h1 class="mt-4 dash">Round 1</h1>
+  <form class="col-sm-12 q-form" action="/quiz/round1" method="post">
+    <div class="card question-card">
+        <div class="question"><h2>1.) &nbsp;&nbsp;&lt;3</h2></div>
+        <div class="options">
+            <label for='kissing'><input name='aOne', type='radio', value =  'kissing' /> Kissing</label>
+            <label for='love'><input name='aOne', type='radio', value =  'love' /> Love</label>
+            <label for='heart'><input name='aOne', type='radio', value =  'heart' /> Heart</label>
+        </div>
+    </div>
+    <div class="card question-card">
+        <div class="question"><h2>2.) &nbsp;&nbsp;&#128591;</h2></div>
+        <div class="options">
+            <label for='kissing'><input name='aTwo', type='radio', value =  'welcome' /> Welcome</label>
+            <label for='love'><input name='aTwo', type='radio', value =  'thankyou' /> Thank You</label>
+            <label for='heart'><input name='aTwo', type='radio', value =  'highfive' /> High Five</label>
+        </div>
+    </div>
+    <div class="card question-card">
+        <div class="question"><h2>3.) &nbsp;&nbsp;&#128406;</h2></div>
+        <div class="options">
+            <label for='kissing'><input name='aThree', type='radio', value =  'alien' /> Alien</label>
+            <label for='love'><input name='aThree', type='radio', value =  'salute' /> Salute</label>
+            <label for='heart'><input name='aThree', type='radio', value =  'startrek' /> Inspiration from Star Trek</label>
+        </div>
+    </div>
+    <div class="card question-card">
+        <div class="question"><h2>4.) &nbsp;&nbsp;&#128169;</h2></div>
+        <div class="options">
+            <label for='kissing'><input name='aFour', type='radio', value =  'icecream' /> Ice Cream</label>
+            <label for='love'><input name='aFour', type='radio', value =  'dung' /> Dung</label>
+            <label for='heart'><input name='aFour', type='radio', value =  'paint' /> Brown Acrylic Paint</label>
+        </div>
+    </div>
+    <div class="card question-card">
+        <div class="question"><h2>5.) &nbsp;&nbsp;0_o</h2></div>
+        <div class="options">
+            <label for='kissing'><input name='aFive', type='radio', value =  'ghost' /> Ghost</label>
+            <label for='love'><input name='aFive', type='radio', value =  'shocked' /> Shocked</label>
+            <label for='heart'><input name='aFive', type='radio', value =  'fainting' /> Fainting</label>
+        </div>
+    </div>
+    <div class="card question-card">
+        <div class="question"><h2>6.) &nbsp;&nbsp;O:)</h2></div>
+        <div class="options">
+            <label for='kissing'><input name='aOne', type='radio', value =  'angel' /> Angel</label>
+            <label for='love'><input name='aOne', type='radio', value =  'cap' /> Wearing a Cap</label>
+            <label for='heart'><input name='aOne', type='radio', value =  'face' /> Swollen Face</label>
+        </div>
+    </div>
+    <div class="card question-card">
+        <div class="question"><h2>7.) &nbsp;&nbsp;^o^</h2></div>
+        <div class="options">
+            <label for='kissing'><input name='aOne', type='radio', value =  'zombie' /> zombie</label>
+            <label for='love'><input name='aOne', type='radio', value =  'terrified' /> terrified</label>
+            <label for='heart'><input name='aOne', type='radio', value =  'ghost' /> ghost</label>
+        </div>
+    </div>
+    <div>
+        <button type="submit" name="button">Submit</button>
+    </div>
+    </div>
+  </form>  
+  </div>
+
+  
+  
+  
+  
