@@ -10,7 +10,7 @@
           <div class="col-md-6 m-auto">
             <div>
               <h1 class="mb-4 mt-10">
-                <i class="far fa-times-circle"></i> &nbsp;&nbsp;You have already attempted Round 2 and this isn't Coursera &#129299;.
+                <i class="far fa-times-circle"></i> &nbsp;&nbsp;You have already attempted Round 2 &#129299;.
               </h1>
             </div>
           </div>
@@ -21,6 +21,7 @@
     <h1 class='user mt-4'><i class='fas fa-user'></i> Welcome <strong><%= user.name %></strong></h1>
     <h1 class='wel-fol mt-4'>Your registered email is <span class='emphasis'><%= user.email%></span>.</h1>
     <h1 class="mt-4 dash">Round 2</h1>
+    <h3>Given below are some emojis and 3 options of what they could be. Choose the most suitable answer.</h3>
     <form class="col-sm-12 q-form" action="/quiz/round2" method="post">
       <div class="card question-card">
           <div class="question"><h2>1.) &nbsp;&nbsp;&#128073;&#128081;&#128115;</h2><h3>Hint : A sports personality</h3></div>
@@ -65,7 +66,7 @@
           </div>
       </div>
       <div>
-          <button type="submit" name="button">Submit</button>
+        <button type="submit" name="button" class='last-butt'>Submit</button>
       </div>
       </div>
     </form>  
