@@ -21,6 +21,9 @@ round3: [
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref:'User'
+},
+name: {
+  type: String
 }
 });
 

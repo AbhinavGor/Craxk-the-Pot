@@ -26,6 +26,7 @@ router.post('/round1', ensureAuthenticated, (req, res) => {
 
   const response = new Response({});
   response.round1.push(aOne, aTwo, aThree, aFour, aFive, aSix, aSeven);
+  response.name = req.user.name;
   response.user = req.user._id;
   response.save();
   user = req.user;
